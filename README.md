@@ -1,102 +1,129 @@
-# Movie Library - RESTful API
+# 🎥 Movie Library - Full Stack MERN Application
 
-A comprehensive Movie Library backend built with Node.js and Express. It allows users to register, login, and manage a collection of movies, genres, and reviews.
+A dynamic and user-friendly full stack Movie Library application built with **React** on the frontend and **Node.js/Express** on the backend. It features secure authentication, robust movie and genre management, and a review system.
 
 ---
 
-## Features
+## ✨ Features
 
 ### 🎬 Movie Management
 
-* Add, update, delete, and retrieve movies
-* Fetch new, top-rated, and random movies
-* Add and delete movie reviews
+* Create, edit, delete, and view movies
+* Fetch latest, top-rated, and random movies
+* Submit and delete movie reviews
 
-### 🌐 Genre Management
+### 🎭 Genre Management
 
-* Create, update, read, and delete genres
-* View all genres
+* Add, update, delete, and list movie genres
 
 ### 👤 User Management
 
-* User registration and login with password hashing
-* JWT-based authentication
-* Profile management (view/update)
+* Secure registration and login with hashed passwords
+* JWT-based authentication with cookie-based tokens
+* Profile view and update
 * Logout functionality
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
-* **Backend:** Node.js, Express
-* **Database:** MongoDB
-* **Authentication:** JWT (JSON Web Tokens), bcrypt
-
----
-
-## API Endpoints Overview
-
-### Movies
-
-* `POST /api/movies` - Create a new movie
-* `GET /api/movies` - Get all movies
-* `GET /api/movies/:id` - Get specific movie
-* `PUT /api/movies/:id` - Update movie
-* `DELETE /api/movies/:id` - Delete movie
-* `POST /api/movies/:id/review` - Add movie review
-* `DELETE /api/movies/comment` - Delete movie comment
-* `GET /api/movies/new` - Get new movies
-* `GET /api/movies/top` - Get top-rated movies
-* `GET /api/movies/random` - Get random movies
-
-### Genres
-
-* `POST /api/genres` - Create genre
-* `GET /api/genres` - Get all genres
-* `GET /api/genres/:id` - Read genre
-* `PUT /api/genres/:id` - Update genre
-* `DELETE /api/genres/:id` - Delete genre
-
-### Users
-
-* `POST /api/users/register` - Register new user
-* `POST /api/users/login` - Login
-* `POST /api/users/logout` - Logout
-* `GET /api/users/profile` - Get logged-in user profile
-* `PUT /api/users/profile` - Update profile
-* `GET /api/users` - Get all users (admin)
+| Frontend     | Backend      | Database | Authentication |
+| ------------ | ------------ | -------- | -------------- |
+| React        | Node.js      | MongoDB  | JWT            |
+| Axios        | Express.js   | Mongoose | bcrypt         |
+| React Router | RESTful APIs |          | Cookies        |
 
 ---
 
-## Getting Started
+## 🌐 API Overview
 
-### Prerequisites
+### 🎥 Movies
 
-* Node.js
-* MongoDB
+* `POST /api/movies`
+* `GET /api/movies`
+* `GET /api/movies/:id`
+* `PUT /api/movies/:id`
+* `DELETE /api/movies/:id`
+* `POST /api/movies/:id/review`
+* `DELETE /api/movies/comment`
+* `GET /api/movies/new`
+* `GET /api/movies/top`
+* `GET /api/movies/random`
 
-### Installation
+### 🏋️ Genres
+
+* `POST /api/genres`
+* `GET /api/genres`
+* `GET /api/genres/:id`
+* `PUT /api/genres/:id`
+* `DELETE /api/genres/:id`
+
+### 👥 Users
+
+* `POST /api/users/register`
+* `POST /api/users/login`
+* `POST /api/users/logout`
+* `GET /api/users/profile`
+* `PUT /api/users/profile`
+* `GET /api/users` *(Admin only)*
+
+---
+
+## ⚙️ Getting Started
+
+### 📦 Prerequisites
+
+* Node.js & npm
+* MongoDB instance (local or cloud)
+
+### 🔧 Backend Setup
 
 ```bash
 git clone https://github.com/your-username/movie-library.git
 cd movie-library
 npm install
+npm start
 ```
 
-### Running the Server
+### 💻 Frontend Setup
 
 ```bash
+cd client
+npm install
 npm start
 ```
 
 ---
 
-## Folder Structure
+## 📁 Folder Structure
 
-* `controllers/` - Contains user, movie, and genre controllers
-* `models/` - Mongoose models for User, Movie, and Genre
-* `middlewares/` - Async handler, authentication, etc.
-* `routes/` - API routes
+```
+movie-library/
+├── controllers/         # Backend logic (User, Movie, Genre)
+├── models/              # Mongoose schemas
+├── routes/              # Express routes
+├── middlewares/         # Middleware (auth, async handler)
+├── client/              # React frontend
+├── .env                 # Environment variables
+├── server.js            # Entry point
+```
+
+---
+
+## 📅 Environment Variables
+
+Create a `.env` file in the root directory with the following:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+```
+
+## 🙌 Acknowledgments
+
+* Inspired by IMDb, TMDB
+* Built with ❤️ using React, Node.js, and MongoDB
+
 
 ---
 
